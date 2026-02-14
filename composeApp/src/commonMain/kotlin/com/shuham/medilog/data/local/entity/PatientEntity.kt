@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 import com.shuham.medilog.domain.model.Gender
 import com.shuham.medilog.domain.model.Patient
 import com.shuham.medilog.domain.model.RiskLevel
-import kotlinx.datetime.Instant
+import kotlin.time.Instant
 
 /**
  * Room Entity for Patient

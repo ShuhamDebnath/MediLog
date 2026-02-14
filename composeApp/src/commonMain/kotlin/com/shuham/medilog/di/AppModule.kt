@@ -22,5 +22,6 @@ val appModule = module {
 val allModules = listOf(
     appModule,
     databaseModule,
+    dataStoreModule,
     repositoryModule
 )

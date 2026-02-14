@@ -36,15 +36,29 @@ The project follows a strict Clean Architecture pattern to ensure separation of 
 
 ```mermaid
 graph TD
-    subgraph "UI Layer (composeApp)"
-        UI[Compose Screens] --> VM[Shared ViewModels]
+    UI[Compose Screens]
+    VM[Shared ViewModels]
+    UC[Use Cases]
+    Repo[Repository Interface]
+    Local[Room DB Local]
+    Remote[Firebase Remote]
+    
+    UI --> VM
+    VM --> UC
+    UC --> Repo
+    Repo --> Local
+    Repo --> Remote
+    
+    subgraph UILayer["UI Layer"]
+        UI
+        VM
     end
-
-    subgraph "Shared Module (Business Logic)"
-        VM --> UC[Use Cases]
-        UC --> Repo[Repository Interface]
-        Repo --> Local[Room DB (Local)]
-        Repo --> Remote[Firebase (Remote)]
+    
+    subgraph SharedModule["Shared Module"]
+        UC
+        Repo
+        Local
+        Remote
     end
 ```
 

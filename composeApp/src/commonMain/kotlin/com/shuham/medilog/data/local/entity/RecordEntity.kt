@@ -6,10 +6,8 @@ import androidx.room.Index
 import androidx.room.PrimaryKey
 import com.shuham.medilog.domain.model.AIResult
 import com.shuham.medilog.domain.model.Record
-import com.shuham.medilog.domain.model.RiskLevel
-import kotlinx.datetime.Instant
-import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
+import kotlin.time.Instant
 
 /**
  * Room Entity for Medical Record

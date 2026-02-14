@@ -68,6 +68,10 @@ kotlin {
             
             // DataStore
             implementation(libs.datastore.preferences)
+            implementation(libs.datastore.preferences.core)
+            
+            // Okio (for iOS DataStore)
+            implementation(libs.okio)
         }
         
         commonTest.dependencies {
